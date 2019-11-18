@@ -30,18 +30,20 @@ public class QuestionsScreen extends Screen {
 
         mainActivity = (MainActivity) game;
 
-        questionBar = new Sprite(StandardAsset.questionBarImage, (int)(game.getGraphics().getWidth()/10), (int)(game.getGraphics().getHeight()/10), 150, 900);
+        questionBar = new Sprite(StandardAsset.questionBarImage, (int)(game.getGraphics().getWidth()/10), (int)(game.getGraphics().getHeight()/10), (int)(game.getGraphics().getHeight()/12), (int)(game.getGraphics().getWidth()*3.3/4));
+        //Log.d(TAG, "screen height : "+game.getGraphics().getHeight());
+        //Log.d(TAG, "screen width : "+game.getGraphics().getWidth());
         background = new Sprite(StandardAsset.bg, 0, 0, game.getGraphics().getHeight(), game.getGraphics().getWidth());
 
-        spriteCoin = new Sprite(StandardAsset.coinImage, (int)game.getGraphics().getWidth()/100, (int)(game.getGraphics().getHeight()/200), 100, 100);
-        spriteDigit = new Sprite(StandardAsset.digitImage, (int)game.getGraphics().getWidth()/9, (int)(game.getGraphics().getHeight()/200), 100, 50);
+        spriteCoin = new Sprite(StandardAsset.coinImage, (int)game.getGraphics().getWidth()/100, (int)(game.getGraphics().getHeight()/200), (int)(game.getGraphics().getHeight()/16), (int)(game.getGraphics().getWidth()/10));
+        spriteDigit = new Sprite(StandardAsset.digitImage, (int)game.getGraphics().getWidth()/9, (int)(game.getGraphics().getHeight()/200), (int)(game.getGraphics().getHeight()/16), (int)(game.getGraphics().getWidth()/15));
 
-        playSprite = new PlaySprite(StandardAsset.playIcon, StandardAsset.questionSound, (int)(game.getGraphics().getWidth()/2.4), (int)(game.getGraphics().getHeight()/4.8), 200, 200);
-        optionA = new OptionSprite(StandardAsset.optionAImage, (int)(game.getGraphics().getWidth()/10), (int)(game.getGraphics().getHeight()/2.74), 300, 300);
+        playSprite = new PlaySprite(StandardAsset.playIcon, StandardAsset.questionSound, (int)(game.getGraphics().getWidth()/2.4), (int)(game.getGraphics().getHeight()/4.8), (int)(game.getGraphics().getHeight()/10), (int)(game.getGraphics().getWidth()/5));
+        optionA = new OptionSprite(StandardAsset.optionAImage, (int)(game.getGraphics().getWidth()/10), (int)(game.getGraphics().getHeight()/2.74), (int)(game.getGraphics().getHeight()/6), (int)(game.getGraphics().getWidth()/4));
         optionA.setType(1);
-        optionB = new OptionSprite(StandardAsset.optionBImage, (int)(game.getGraphics().getWidth()/1.54), (int)(game.getGraphics().getHeight()/2.74), 300, 300);
+        optionB = new OptionSprite(StandardAsset.optionBImage, (int)(game.getGraphics().getWidth()/1.54), (int)(game.getGraphics().getHeight()/2.74), (int)(game.getGraphics().getHeight()/6), (int)(game.getGraphics().getWidth()/4));
         optionB.setType(2);
-        optionC = new OptionSprite(StandardAsset.optionCImage, (int)(game.getGraphics().getWidth()/2.4), (int)(game.getGraphics().getHeight()/1.476), 300, 300);
+        optionC = new OptionSprite(StandardAsset.optionCImage, (int)(game.getGraphics().getWidth()/2.4), (int)(game.getGraphics().getHeight()/1.476), (int)(game.getGraphics().getHeight()/6), (int)(game.getGraphics().getWidth()/4));
         optionC.setType(3);
 
         addSprite(background);
@@ -228,15 +230,15 @@ public class QuestionsScreen extends Screen {
         removeSprite(optionA);
         removeSprite(optionB);
         removeSprite(optionC);
-        spriteDigit = new Sprite(StandardAsset.digitImage, 120, 10, 100, 50);
+        spriteDigit = new Sprite(StandardAsset.digitImage, (int)game.getGraphics().getWidth()/9, (int)(game.getGraphics().getHeight()/200), (int)(game.getGraphics().getHeight()/16), (int)(game.getGraphics().getWidth()/15));
 
         addSprite(spriteDigit);
 
-        optionA = new OptionSprite(StandardAsset.optionAImage, 100, 700, 300, 300);
+        optionA = new OptionSprite(StandardAsset.optionAImage, (int)(game.getGraphics().getWidth()/10), (int)(game.getGraphics().getHeight()/2.74), (int)(game.getGraphics().getHeight()/6), (int)(game.getGraphics().getWidth()/4));
         optionA.setType(1);
-        optionB = new OptionSprite(StandardAsset.optionBImage, 700, 700, 300, 300);
+        optionB = new OptionSprite(StandardAsset.optionBImage, (int)(game.getGraphics().getWidth()/1.54), (int)(game.getGraphics().getHeight()/2.74), (int)(game.getGraphics().getHeight()/6), (int)(game.getGraphics().getWidth()/4));
         optionB.setType(2);
-        optionC = new OptionSprite(StandardAsset.optionCImage, 420, 1300, 300, 300);
+        optionC = new OptionSprite(StandardAsset.optionCImage, (int)(game.getGraphics().getWidth()/2.4), (int)(game.getGraphics().getHeight()/1.476), (int)(game.getGraphics().getHeight()/6), (int)(game.getGraphics().getWidth()/4));
         optionC.setType(3);
 
         addSprite(optionA);

@@ -1,9 +1,6 @@
 package android.example.com.questionsgame.database;
 
-import com.example.ensias_auth_library.models.GameStat;
-
 import java.util.Date;
-import java.sql.Time;
 
 /**
  * Created by Lenovo on 4/15/2018.
@@ -137,22 +134,6 @@ public class GameAsset {
 
     public void setDevice(String device) {
         Device = device;
-    }
-
-    public GameStat makeGameStat(){
-        GameStat gameStat = new GameStat();
-        gameStat.setApp_id(getApp_id());
-        gameStat.setExercise_id(getExercise_id());
-        gameStat.setLevel_id(getLevel_id());
-        gameStat.setUpdated_at(getUpdated_At().toString());
-        gameStat.setCreated_at(getCreated_At().toString());
-        gameStat.setSuccessful_attempts(String.valueOf(getSuccessful_attempts()));
-        gameStat.setFailed_attempts(String.valueOf(getFailed_attempts()));
-        gameStat.setMin_time_succeed_sec(String.valueOf(getMin_time_succeed_sec()) + "s");
-        gameStat.setAvg_time_succeed_sec(String.valueOf(getAvg_time_succeed_sec()) + "s");
-        gameStat.setLongitude(String.valueOf(longitude));
-        gameStat.setLatitude(String.valueOf(latitude));
-        return gameStat;
     }
 
     public void initializeGameAsset(){
